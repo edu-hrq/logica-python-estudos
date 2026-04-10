@@ -16,8 +16,11 @@ while loop == 0:
         multiplicacao = numero * numero2
         print(f'A multiplicação dos números é de: {multiplicacao}')
     elif operacao == 4:
-        divisao = numero / numero2
-        print(f'A divisão dos números é de: {divisao}')
+        if numero2 == 0:
+            print('Erro: Divisão por 0 não é permitida.')
+        else:
+            divisao = numero / numero2
+            print(f'A divisão dos números é de: {divisao}')
     elif operacao == 5:
         potencia = numero ** numero2
         print(f'A potência dos números é de: {potencia}')

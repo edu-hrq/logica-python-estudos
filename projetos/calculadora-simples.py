@@ -2,14 +2,8 @@
 # Objetivo com o código: Receber dois números, realizar uma operação e mostrar o resultado.
 loop = 0
 while loop == 0:
-    print('\n======== CALCULADORA ========')
-    print('1 - Adição')
-    print('2 - Subtração')
-    print('3 - Multiplicação')
-    print('4 - Divisão')
-    print('5 - Potenciação')
-    print('- 0 Sair')
-    print('=============================')
+    print('\n======== CALCULADORA ========\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Potenciação\n0 - Sair\n=============================')
+
     operacao = int(input('Escolha uma opção: '))
 
     if operacao == 0: # opção p/ sair da calculadora

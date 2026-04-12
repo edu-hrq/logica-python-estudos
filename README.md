@@ -30,4 +30,8 @@ OBS2: Cada projeto terá seu próprio README e será numerado juntamente com o p
 
 - Estruturas condicionais
 - Laços de repetição
+<<<<<<< HEAD
 - Funções
+=======
+- Funções
+>>>>>>> b845853746572d6d0b770b449135c0d9abe82a9c

@@ -7,7 +7,7 @@ faturamento = 45000
 custo = 23500
 lucro = faturamento - custo
 margem_lucro = (lucro / faturamento) * 100
-print(f'O Lucro nas vendas do Produto foi de R$ {lucro:,.2f}. Isso equivale a {margem_lucro:.0f}%.')
+print(f'Resposta do Exercício 1: O Lucro nas vendas do Produto foi de R$ {lucro:,.2f}. Isso equivale a {margem_lucro:.0f}%.\n')
 
 ''' EXERCÍCIO 2: PADRONIZAÇÃO DE DADOS DE CRM (SETOR DE VENDA)
 Um vendedor cadastrouum cliente com os dados desorganizados no sistema: nome = " mArCoS aNtOnIo rOcHa " e email = " MARCOS.ROCHA@GMAIL.COM ". 
@@ -20,7 +20,7 @@ nome = ' mArCoS aNtOnIo rOcHa '
 email = ' MARCOS.ROCHA@GMAIL.COM '
 nome = nome.strip().title() # strip tira os espaços vazios, title deixa as primeiras letras maiúsculas
 email = email.strip().lower() # strip tira os espaços vazios, lower deixa todas as letas minúsculas
-print(f'Nome do colaborador: {nome}. E-mail do colaborador: {email}')
+print(f'Resposta do Exercíco 2: Nome do colaborador: {nome}. E-mail do colaborador: {email}\n')
 
 ''' EXERCICIO 3: MIGRAÇÃO DE SERVIDOR DE E-MAIL (SETOR DE TI)
 Sua empresa mudou de nome e todos os funcionários que usavam o domínio @empresa.com.br agora devem usar o domínio @grupocorp.com.
@@ -28,5 +28,29 @@ O e-mail do funcionário é andre_silva@empresa.com.br. Crie um código que subs
 '''
 email = 'eduardo.silva@empresa.com.br'
 novo_dominio = '@grupocorp.com'
-email = email.replace('@empresa.com.br', novo_dominio)
-print(email)
+email = email.replace('@empresa.com.br', novo_dominio) # substituição do dominio antigo pelo novo
+print(f'Resposta do Exercício 3: {email}\n')
+
+''' EXERCÍCIO 4: EXTRAÇÃO DE USERNAME PARA LOG (SETOR DE SEGURANÇA)
+Para criar um log de acessos, o sistema precisa extrair apenas a parte do nome do usuário de um e-mail corporativo (tudo o que vem antes do @).
+Dado o e-mail beatriz.oliveira@grupocorp.com, use a função .find() e o fatiamento de texto para extrair e exibir apenas o nome beatriz.oliveira.
+'''
+email = 'beatriz.oliveira@grupocorp.com'
+posicao_a = email.find('@') # localização da posição do @ na string
+username = email[:posicao_a] # decreta que a variavel username será o email até onde está a posição do @
+print(f'Resposta do Exercício 4: {username}\n')
+
+''' EXERCÍCIO 5: PERSONALIZAÇÃO DE EMAIL DE MARKETING (SETOR DE MARKETING)
+O marketing quer enviar um e-mail de boas-vindas. O cliente forneceu o nome completo: lucas ferreira souza. 
+Você deve extrair apenas o primeiro nome para usar na saudação (ex: "Olá, Lucas!"). O código deve:
+1. Encontrar a posição do primeiro espaço.
+2. Fatiar o texto para pegar apenas o primeiro nome.
+3. Formatar o nome com a primeira letra maiúscula.
+4. Exibir a mensagem: "Olá, [Primeiro Nome], seja bem-vindo ao nosso clube!"
+'''
+mensagem = 'Olá, [Primeiro Nome], seja bem-vindo ao nosso clube!'
+nome = 'lucas ferreira souza'
+posicao_espaco = nome.find(' ') # localiza o primeiro espaço no texto
+pri_nome = nome[:posicao_espaco].capitalize() # variavel pri_nome será nome até onde está o primeiro espaço e deixa a primeira letra maiúscula
+mensagem = mensagem.replace('[Primeiro Nome]', pri_nome)
+print(f'Resposta do Exercício 5: {mensagem}\n')

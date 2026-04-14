@@ -13,6 +13,14 @@ def divisao(a, b): # função de divisão (que valida se o divisor é 0 ou não)
 def potenciacao(a, b): # função de potenciação
         return a ** b
 
+operacoes = { # dicionario das operacoes que serão feitas na calculadora
+        1: adicao,
+        2: subtracao,
+        3: multiplicacao,
+        4: divisao,
+        5: potenciacao,
+    }
+
 while True:
     print('\n======== CALCULADORA ========\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Potenciação\n0 - Sair\n=============================')
     try:
@@ -24,19 +32,13 @@ while True:
     if operacao == 0: # opção p/ sair da calculadora
         print('Encerrando calculadora...')
         break
-
+    
+    if operacao not in operacoes:
+         print('Operação inválida! Tente novamente: ')
+         continue
+    
     numero = float(input('Digite o primeiro número desejado: '))
     numero2 = float(input('Digite o segundo número desejado: '))
 
-    if operacao == 1:
-        print(f'A adição dos números é de: {adicao(numero, numero2)}.')
-    elif operacao == 2:
-        print(f'A subtração dos números é de: {subtracao(numero, numero2)}')
-    elif operacao == 3:
-        print(f'A multiplicação dos números é de: {multiplicacao(numero, numero2)}')
-    elif operacao == 4:
-        print(f'A divisão dos números é de: {divisao(numero, numero2)}')
-    elif operacao == 5:
-        print(f'A potência dos números é de: {potenciacao(numero, numero2)}')
-    else:
-        print('Operação selecionada inválida, tente novamente.')
+    resultado = operacoes[operacao](numero, numero2)
+    print(f'\nResultado da operação desejada: {resultado}\n')

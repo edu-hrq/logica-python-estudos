@@ -32,9 +32,9 @@ O programa permite o user realizar operações matemáticas básicas diretamente
 - Laços de repetição (while);
 - Entrada e saída de dados;
 - Validação de dados;
-- Organização e fluxo de programa.
+- Organização e fluxo de programa;
+- Estrutura de dados (Dicionário).
 
 ## Pontos a melhorar futuramente:
 
 - Adição de um histórico do que foi calculado
-- Separação dos códigos em funções

@@ -13,6 +13,8 @@ def divisao(a, b): # função de divisão (que valida se o divisor é 0 ou não)
 def potenciacao(a, b): # função de potenciação
         return a ** b
 
+historico = []
+
 operacoes = { # dicionario das operacoes que serão feitas na calculadora
         1: adicao,
         2: subtracao,
@@ -21,8 +23,16 @@ operacoes = { # dicionario das operacoes que serão feitas na calculadora
         5: potenciacao,
     }
 
+simbolos = {
+      1: '+',
+      2: '-',
+      3: '*',
+      4: '/',
+      5: '**',  
+    }
+
 while True:
-    print('\n======== CALCULADORA ========\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Potenciação\n0 - Sair\n=============================')
+    print('\n======== CALCULADORA ========\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Potenciação\n6 - Ver histórico\n7 - Limpar histórico\n0 - Sair\n=============================')
     try:
         operacao = int(input('Escolha uma opção: '))
     except ValueError:
@@ -33,12 +43,34 @@ while True:
         print('Encerrando calculadora...')
         break
     
+    if operacao == 6: # ver histórico
+          print('HISTÓRICO:')
+          if not historico:
+                print('Nenhuma operação realizada.')
+          else:
+                for item in historico:
+                      print(item)
+          continue
+
+    if operacao == 7: # limpar o histórico
+          historico.clear()
+          print('Histórico apagado!')
+          continue
+    
     if operacao not in operacoes:
          print('Operação inválida! Tente novamente: ')
          continue
     
-    numero = float(input('Digite o primeiro número desejado: '))
-    numero2 = float(input('Digite o segundo número desejado: '))
+    try: # emtrada de dados
+        numero = float(input('Digite o primeiro número desejado: '))
+        numero2 = float(input('Digite o segundo número desejado: '))
+    except ValueError:
+          print('Digite valores numéricos!')
+          continue
+    
+    resultado = operacoes[operacao](numero, numero2) # processamento dos dados
 
-    resultado = operacoes[operacao](numero, numero2)
-    print(f'\nResultado da operação desejada: {resultado}\n')
+    simbolo = simbolos[operacao] # guarda a operação selecionada
+    historico.append(f'{numero} {simbolo} {numero2} = {resultado}') # adiciona cálculo feito ao histórico
+    
+    print(f'\nResultado da operação desejada: {resultado}\n') # imprime o resultado dos dados

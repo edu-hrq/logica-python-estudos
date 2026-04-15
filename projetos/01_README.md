@@ -3,7 +3,7 @@
 ## Descrição:
 
 Esse projeto é uma calculadora simples desenvolvida na linguagem Python com o foco de treinar lógica de programação e estruturas de controle.
-O programa permite o user realizar operações matemáticas básicas diretamente pelo terminal, com um menu interativo e validações de entrada.
+O programa permite o user realizar operações matemáticas básicas diretamente pelo terminal, com um menu interativo, histórico das operações matemáticas realizadas e validações de entrada.
 
 ## Funcionalidades:
 
@@ -12,6 +12,8 @@ O programa permite o user realizar operações matemáticas básicas diretamente
 - Multiplicação
 - Divisão (com tratamento para divisão por zero)
 - Potenciação
+- Visualização de histórico de cálculos feitos
+- Limpeza do histórico
 - Menu interativo
 
 ## Como usar:
@@ -33,8 +35,10 @@ O programa permite o user realizar operações matemáticas básicas diretamente
 - Entrada e saída de dados;
 - Validação de dados;
 - Organização e fluxo de programa;
-- Estrutura de dados (Dicionário).
+- Estrutura de dados - Listas e Dicionários.
 
 ## Pontos a melhorar futuramente:
 
-- Adição de um histórico do que foi calculado
+- Futura interface gráfica
+- Adicionar data/hora
+- Salvamento em arquivo .txt

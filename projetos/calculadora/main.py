@@ -14,13 +14,6 @@ def divisao(a, b): # função de divisão (que valida se o divisor é 0 ou não)
             return a / b
 def potenciacao(a, b): # função de potenciação
         return a ** b
-def visu_historico():
-      print('HISTÓRICO:')
-      if not historico:
-        print('Histórico vazio - Nenhuma operação realizada')
-      else:
-        for item in historico:
-            print(item)
     
 operacoes = { # dicionario das operacoes que serão feitas na calculadora
         1: adicao,
@@ -28,7 +21,6 @@ operacoes = { # dicionario das operacoes que serão feitas na calculadora
         3: multiplicacao,
         4: divisao,
         5: potenciacao,
-        6: visu_historico,
     }
 
 simbolos = {
@@ -50,6 +42,15 @@ while True:
     if operacao == 0: # opção p/ sair da calculadora
         print('Encerrando calculadora...')
         break
+
+    if operacao == 6:
+        print('HISTÓRICO:')
+        if not historico:
+            print('Histórico vazio - Nenhuma operação realizada')
+        else:
+            for item in historico:
+                print(item)
+        continue
 
     if operacao == 7: # limpar o histórico
           historico.clear()

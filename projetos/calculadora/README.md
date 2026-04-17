@@ -18,7 +18,7 @@ O programa permite o user realizar operações matemáticas básicas diretamente
 
 ## Como usar:
 
-1. Execute o arquivo 'calculadora-simples.py'
+1. Execute o arquivo 'main.py'
 2. Escolha a operação desejada
 3. Insira os números solicitados
 4. Veja o resultado

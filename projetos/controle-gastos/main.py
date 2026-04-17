@@ -56,7 +56,7 @@ def total_gasto(): # soma de todos os valores presentes na variável controle de
     else:
         for item in controle:
             soma += item['valor']
-    print(f'================================\n   TOTAL - R$ {soma:,.2f}   \n================================')
+    print(f'================================\n   TOTAL - R$ {formatacao_valor(soma)}   \n================================')
 
 def limpa_controle(): # limpar lista de controle de gastos
     confirmacao = input('Você tem certeza de que quer excluir o Controle de Gastos? (S para Sim | N para não) ')

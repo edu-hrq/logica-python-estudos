@@ -21,7 +21,7 @@ def obter_valor():
                 print('\nValor do Gasto não pode ser menor ou igual a 0.\n')
                 continue
             
-            return valor
+            return valor # salva valor na memória
         
         except ValueError:
             print('\nValor inválido - Tente novamente.\n')
@@ -37,13 +37,16 @@ def adicionar_gasto(): # adiciona o gasto à lista de controle de gastos, com du
     controle.append(gasto) # adição do dicionário à lista de controle
     print('\nGasto adicionado com sucesso.\n')
 
+def formatacao_valor(valor): # formatação adequada do valor em Reais para a lista de gastos
+    return f"R$ {valor:,.2f}".replace(',', 'X').replace('.', ',').replace('X', '.')
+
 def lista_gasto(): # mostra a lista de controle de gastos
     contador = 1
     if not controle:
         print('\nO controle está vazio.\n')
     else:
         for item in controle:
-            print(f"{contador}. {item['nome']} - R$ {item['valor']:,.2f}")
+            print(f"{contador}. {item['nome']} - R$ {formatacao_valor(item['valor'])}")
             contador += 1
 
 def total_gasto(): # soma de todos os valores presentes na variável controle de gastos.

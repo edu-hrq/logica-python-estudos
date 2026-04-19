@@ -73,4 +73,11 @@ Crie um sistema que ajude a filtrar para qual departamento uma reclamação deve
 ● Se no assunto aparecer a palavra "entrega" ou "atraso", exiba: "Encaminhado para a Logística".
 ● Caso não seja nenhum desses, exiba: "Encaminhado para o Suporte Geral". Dica: Use o operador in para verificar se a palavra está dentro do texto.'''
 
+assunto = input('Digite o problema: ').lower()
 
+if 'pagamento' in assunto or 'boleto' in assunto: # operador in verifica se condição está em x variável
+    print('Encaminhado para o setor financeiro.')
+elif 'entrega' in assunto or 'atraso' in assunto:
+    print('Encaminhado para a Logística.')
+else:
+    print('Encaminhado para o suporte geral.')

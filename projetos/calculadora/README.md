@@ -12,7 +12,7 @@ O programa permite o user realizar operações matemáticas básicas diretamente
 - Multiplicação
 - Divisão (com tratamento para divisão por zero)
 - Potenciação
-- Visualização de histórico de cálculos feitos
+- Visualização de histórico de cálculos feitos com dia e hora em que foram feitos
 - Limpeza do histórico
 - Menu interativo
 
@@ -36,9 +36,9 @@ O programa permite o user realizar operações matemáticas básicas diretamente
 - Validação de dados;
 - Organização e fluxo de programa;
 - Estrutura de dados - Listas e Dicionários.
+- Uso da biblioteca datetime
 
 ## Pontos a melhorar futuramente:
 
 - Futura interface gráfica
-- Adicionar data/hora
 - Salvamento em arquivo .txt

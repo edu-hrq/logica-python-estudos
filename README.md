@@ -12,6 +12,8 @@ Esse repositório foi criado com o intuito de desenvolver e mostrar, de forma s�
     style="padding-right: 5px"
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
 
+<br>
+
 ### Estrutura do Repositório
 
 OBS: A estrutura sofrerá alterações conforme os exercícios e projetos forem adicionados / atualizados.

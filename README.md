@@ -2,28 +2,39 @@
 
 Esse repositório foi criado com o intuito de desenvolver e mostrar, de forma sólida e transparente, minha evolução com a linguagem Python através de exercícios e projetos.
 
-## Objetivo:
+### 🤖 Tecnologias usadas
 
-- Fortalecer o raciocínio lógico
-- Melhorar a resolução de problemas
-- Criar constância e consistência nos estudos
-- Evoluir através da prática
+ <img 
+    align="left" 
+    alt="Python"
+    title="Python" 
+    width="30px"
+    style="padding-right: 5px"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
 
-## Tecnologias usadas
-
-- Python 3
-
-## Estrutura do Repositório
+### Estrutura do Repositório
 
 OBS: A estrutura sofrerá alterações conforme os exercícios e projetos forem adicionados / atualizados.
-OBS2: Cada projeto terá seu próprio README e será numerado juntamente com o projeto.
+OBS2: Cada projeto possui seu próprio README e estará junto com a pasta do projeto.
 
 📁 logica/
-- 01-exercicio-variaveis.py
-- 02-exercicio-textos.py
+- dia_01.py
+- dia_02.py
+- dia_03.py
+- dia_04.py
+- dia_05.py
+- dia_06.py
+- dia_07.py
+- dia_08.py
 
+📁 orientacao_a_objetos/
+- dia_01.py
+  
 📁 projetos/
-- 01_calculadora-simples.py
+- 📁 calculadora/
+- 📁 controle-gastos/
+- 📁 to-do-list/
+
 - 01_README.md 
 
 ## Tipos de Exercícios
